@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="projectsDataSet12" targetNamespace="http://tempuri.org/projectsDataSet12.xsd" xmlns:mstns="http://tempuri.org/projectsDataSet12.xsd" xmlns="http://tempuri.org/projectsDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="projectsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="projectsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.projectsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="orderssTableAdapter" GeneratorDataComponentClassName="orderssTableAdapter" Name="orderss" UserDataComponentName="orderssTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="projectsConnectionString (Settings)" DbObjectName="projects.dbo.orderss" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT order_id FROM dbo.orderss</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="order_id" DataSetColumn="order_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="projectsDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="projectsDataSet12" msprop:Generator_DataSetName="projectsDataSet12">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="orderss" msprop:Generator_RowEvHandlerName="orderssRowChangeEventHandler" msprop:Generator_RowDeletedName="orderssRowDeleted" msprop:Generator_RowDeletingName="orderssRowDeleting" msprop:Generator_RowEvArgName="orderssRowChangeEvent" msprop:Generator_TablePropName="orderss" msprop:Generator_RowChangedName="orderssRowChanged" msprop:Generator_RowChangingName="orderssRowChanging" msprop:Generator_TableClassName="orderssDataTable" msprop:Generator_RowClassName="orderssRow" msprop:Generator_TableVarName="tableorderss" msprop:Generator_UserTableName="orderss">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="order_id" msprop:Generator_ColumnPropNameInRow="order_id" msprop:Generator_ColumnPropNameInTable="order_idColumn" msprop:Generator_ColumnVarNameInTable="columnorder_id" msprop:Generator_UserColumnName="order_id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:orderss" />
+      <xs:field xpath="mstns:order_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="projectsDataSet14" targetNamespace="http://tempuri.org/projectsDataSet14.xsd" xmlns:mstns="http://tempuri.org/projectsDataSet14.xsd" xmlns="http://tempuri.org/projectsDataSet14.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="projectsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="projectsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.projectsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PaymentsTableAdapter" GeneratorDataComponentClassName="PaymentsTableAdapter" Name="Payments" UserDataComponentName="PaymentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="projectsConnectionString (Settings)" DbObjectName="projects.dbo.Payments" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT bill_number, payment_type, total_amount FROM dbo.Payments</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bill_number" DataSetColumn="bill_number" />
+              <Mapping SourceColumn="payment_type" DataSetColumn="payment_type" />
+              <Mapping SourceColumn="total_amount" DataSetColumn="total_amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="projectsDataSet14" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="projectsDataSet14" msprop:Generator_DataSetName="projectsDataSet14">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Payments" msprop:Generator_RowEvHandlerName="PaymentsRowChangeEventHandler" msprop:Generator_RowDeletedName="PaymentsRowDeleted" msprop:Generator_RowDeletingName="PaymentsRowDeleting" msprop:Generator_RowEvArgName="PaymentsRowChangeEvent" msprop:Generator_TablePropName="Payments" msprop:Generator_RowChangedName="PaymentsRowChanged" msprop:Generator_RowChangingName="PaymentsRowChanging" msprop:Generator_TableClassName="PaymentsDataTable" msprop:Generator_RowClassName="PaymentsRow" msprop:Generator_TableVarName="tablePayments" msprop:Generator_UserTableName="Payments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bill_number" msprop:Generator_ColumnPropNameInRow="bill_number" msprop:Generator_ColumnPropNameInTable="bill_numberColumn" msprop:Generator_ColumnVarNameInTable="columnbill_number" msprop:Generator_UserColumnName="bill_number" type="xs:int" />
+              <xs:element name="payment_type" msprop:Generator_ColumnPropNameInRow="payment_type" msprop:Generator_ColumnPropNameInTable="payment_typeColumn" msprop:Generator_ColumnVarNameInTable="columnpayment_type" msprop:Generator_UserColumnName="payment_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total_amount" msprop:Generator_ColumnPropNameInRow="total_amount" msprop:Generator_ColumnPropNameInTable="total_amountColumn" msprop:Generator_ColumnVarNameInTable="columntotal_amount" msprop:Generator_UserColumnName="total_amount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Payments" />
+      <xs:field xpath="mstns:bill_number" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
